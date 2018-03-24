@@ -24,9 +24,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-/**
- * Created by Owner on 2018-03-23.
- */
 
 public class LoginActivity extends AppCompatActivity {
     Button signup;
