@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Real_Final.iml" filepath="$PROJECT_DIR$/Real_Final.iml" />
+      <module fileurl="file://C:\Users\vns\Downloads\ESK-master (1)\ESK-master\Real_Final\Real_Final.iml" filepath="C:\Users\vns\Downloads\ESK-master (1)\ESK-master\Real_Final\Real_Final.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\vns\Downloads\ESK-master (1)\ESK-master\Real_Final\app\app.iml" filepath="C:\Users\vns\Downloads\ESK-master (1)\ESK-master\Real_Final\app\app.iml" />
     </modules>
   </component>
 </project>
