@@ -17,6 +17,7 @@
         android:id="@+id/passwordInput"
         android:layout_centerHorizontal="true"
         android:hint="Password"
+        android:inputType="textPassword"
         android:layout_below="@+id/idInput" />
 
     <Button

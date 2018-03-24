@@ -24,6 +24,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import com.example.owner.real_final.R;
+import com.example.owner.real_final.database.FirebaseDB;
 import com.example.owner.real_final.fragment.HomeFragment;
 import com.example.owner.real_final.fragment.MoviesFragment;
 import com.example.owner.real_final.fragment.NotificationsFragment;
@@ -64,13 +65,16 @@ public class MainActivity extends AppCompatActivity {
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
 
-
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Intent intent = new Intent(this.getIntent());
+        id=intent.getStringExtra("id");
 
         mHandler = new Handler();
 
@@ -106,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
             CURRENT_TAG = TAG_HOME;
             loadHomeFragment();
         }
+
+
     }
 
     /*
@@ -129,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void loadNavHeader() {
         // name(id), website
-        txtName.setText("");
+        txtName.setText(id);
         txtWebsite.setText("id");
 
         // loading header background image
@@ -370,6 +376,10 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
             Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
+            FirebaseDB firebaseDB = new FirebaseDB();
+            firebaseDB.signOut();
+            Intent addIntent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(addIntent);
             return true;
         }
 
