@@ -120,7 +120,7 @@ public class SignUpActivity extends AppCompatActivity {
                             uid = user.getUid();
                             writeNewUser(uid,id);
                             Intent addIntent = new Intent(SignUpActivity.this, LoginActivity.class);
-                            setResult(1, addIntent);
+                            startActivity(addIntent);
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
